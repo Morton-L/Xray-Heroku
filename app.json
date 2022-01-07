@@ -12,6 +12,6 @@
             "value": "443"
         }
     },
-    "repository": "https://github.com/DanyTPG/heroku-vless",
+    "repository": "https://github.com/Morton-L/Xray-Heroku",
     "stack": "container"
 }
