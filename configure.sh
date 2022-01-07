@@ -20,15 +20,20 @@ cat << EOF > /usr/local/etc/Xray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "$ID", 
-                        "flow": "xtls-rprx-direct",
+                        "id": "$ID",
+						"flow": "xtls-rprx-direct",
                         "level": 0
                     }
                 ],
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
+				"security": "none",
+                "wsSettings": {
+                    "acceptProxyProtocol": true,
+                    "path": "/"
+				}
             }
         }
     ],

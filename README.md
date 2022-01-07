@@ -12,4 +12,5 @@ id: Your entered id
 Flow: xtls-rprx-direct
 encryption: none
 Transport: ws
-TLS: tls
+security: none
+Path: /
