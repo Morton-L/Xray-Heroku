@@ -1,0 +1,17 @@
+{
+    "name": "Xray Heroku",
+    "description": "Xray WebSocket Proxy on Heroku.",
+    "keywords": ["VLESS"],
+    "env": {
+        "ID": {
+            "description": "VLESS ID",
+            "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        },
+		"PORT": {
+            "description": "VLESS PORT",
+            "value": "443"
+        }
+    },
+    "repository": "https://github.com/DanyTPG/heroku-vless",
+    "stack": "container"
+}
