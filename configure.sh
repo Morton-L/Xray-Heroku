@@ -21,23 +21,27 @@ cat << EOF > /usr/local/etc/Xray/config.json
                 "clients": [
                     {
                         "id": "$ID",
-						"flow": "xtls-rprx-direct",
                         "level": 0
                     }
                 ],
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws"
-				}
-            }
+                "network": "ws",
+                "wsSettings": {
+                    "path": "/"
+                }
+			}
         }
     ],
     "outbounds": [
         {
             "protocol": "freedom"
         }
-    ]
+    ],
+	"log": {
+		"loglevel": "none"
+	}
 }
 EOF
 
