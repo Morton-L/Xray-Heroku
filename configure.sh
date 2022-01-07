@@ -28,7 +28,7 @@ cat << EOF > /usr/local/etc/Xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws",
+                "network": "ws"
 				}
             }
         }
