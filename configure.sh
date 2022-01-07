@@ -1,10 +1,13 @@
 #!/bin/sh
 
+apk update && apk add --no-cache ca-certificates unzip wget
+
+
 # Download and install Xray
 mkdir /tmp/Xray
-curl -L -H "Cache-Control: no-cache" -o /tmp/Xray/Xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+wget -O /tmp/Xray/Xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
 unzip /tmp/Xray/Xray.zip -d /tmp/Xray
-install -m 755 /tmp/Xray/xray /usr/local/bin/xray
+install -m 755 /tmp/Xray/xray /usr/local/bin/Xray
 
 # Remove temporary directory
 rm -rf /tmp/Xray
@@ -20,8 +23,7 @@ cat << EOF > /usr/local/etc/Xray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "$ID",
-                        "level": 0
+                        "id": "$ID"
                     }
                 ],
                 "decryption": "none"
@@ -46,4 +48,4 @@ cat << EOF > /usr/local/etc/Xray/config.json
 EOF
 
 # Run Xray
-/usr/local/bin/xray -config /usr/local/etc/Xray/config.json
+/usr/local/bin/Xray -config /usr/local/etc/Xray/config.json
