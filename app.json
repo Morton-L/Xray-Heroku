@@ -4,11 +4,11 @@
     "keywords": ["VLESS"],
     "env": {
         "ID": {
-            "description": "VLESS ID",
+            "description": "VLESS UUID",
             "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         },
 		"PORT": {
-            "description": "VLESS PORT",
+            "description": "VLESS WebSocket PORT",
             "value": "443"
         }
     },
