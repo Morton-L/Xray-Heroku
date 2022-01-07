@@ -29,10 +29,6 @@ cat << EOF > /usr/local/etc/Xray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-				"security": "none",
-                "wsSettings": {
-                    "acceptProxyProtocol": true,
-                    "path": "/"
 				}
             }
         }
